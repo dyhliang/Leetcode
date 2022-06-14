@@ -6,17 +6,16 @@ class Solution:
                 "M": 1000}
 
         digits = [char for char in s]
-        sum = 0
+        total = 0
         pos = 0
 
         while pos < len(digits):
             curr = vals[digits[pos]]
-
             if (pos < len(digits) - 1) and (curr < vals[digits[pos + 1]]):
-                sum += vals[digits[pos] + digits[pos + 1]]
+                total += vals[digits[pos] + digits[pos + 1]]
                 pos += 2
             else:
-                sum += curr
+                total += curr
                 pos += 1
 
-        return sum
+        return total
