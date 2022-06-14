@@ -4,14 +4,13 @@ class Solution:
                 "X": 10, "XL": 40, "L": 50, "XC": 90,
                 "C": 100, "CD": 400, "D": 500, "CM": 900, "M": 1000}
 
-        digits = [char for char in s]
         total = 0
         pos = 0
 
-        while pos < len(digits):
-            curr = vals[digits[pos]]
-            if (pos < len(digits) - 1) and (curr < vals[digits[pos + 1]]):
-                total += vals[digits[pos] + digits[pos + 1]]
+        while pos < len(s):
+            curr = vals[s[pos]]
+            if (pos < len(s) - 1) and (curr < vals[s[pos + 1]]):
+                total += vals[s[pos] + s[pos + 1]]
                 pos += 2
             else:
                 total += curr
