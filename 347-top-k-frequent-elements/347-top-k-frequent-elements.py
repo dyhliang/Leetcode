@@ -8,9 +8,6 @@ class Solution:
         if k in range(1, unique_vals + 1):
             for i in range(len(nums)):
                 occ_table[nums[i]] = 1 + occ_table.get(nums[i], 0)
-        else:
-            return []
-        
         
         # Make lists of all keys and values, then map to a new list for [key, occurrences], then sort
         keys_list = list(occ_table.keys())
