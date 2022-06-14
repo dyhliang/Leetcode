@@ -9,10 +9,10 @@ class Solution:
     def traverse(self, res, node):
         if not node:
             return
-            
-        self.traverse(res, node.left)
-        res.append(node.val)
-        self.traverse(res, node.right)
+        else:
+            self.traverse(res, node.left)
+            res.append(node.val)
+            self.traverse(res, node.right)
         
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
         res = []
