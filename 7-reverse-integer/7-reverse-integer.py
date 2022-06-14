@@ -13,15 +13,13 @@ class Solution:
     def reverse(self, x: int) -> int:
 
         new_num = ""
-        if x == 0:
-            return 0
-        elif x >= 1:
+        if x >= 0:
             list_num = [digit for digit in str(x)]
             list_num.reverse()
             
             new_num = self.rev_append(list_num)
             
-            if int(new_num) > (2 ** 31 - 1):
+            if x == 0 or int(new_num) > (2 ** 31 - 1):
                 return 0
             else:
                 return int(new_num)
