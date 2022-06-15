@@ -4,6 +4,5 @@ class Solution:
         
         for i in range(len(nums)):
             occ[nums[i]] = 1 + occ.get(nums[i], 0)
-            
             if occ[nums[i]] == 2:
                 return nums[i]
