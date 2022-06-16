@@ -3,8 +3,7 @@ class Solution:
         
         occ = {}
         while n != 1:
-            digits = [int(x) ** 2 for x in str(n)]
-            n = sum(digits)
+            n = sum([int(x) ** 2 for x in str(n)])
             
             if n not in occ:
                 occ[n] = n
