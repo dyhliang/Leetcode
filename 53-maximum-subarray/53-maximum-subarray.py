@@ -9,8 +9,7 @@ class Solution:
                 curr_arr = 0
     
             curr_arr += nums[pos]
-            
             if curr_arr > max_arr:
                 max_arr = curr_arr
-                    
+                
         return max_arr
