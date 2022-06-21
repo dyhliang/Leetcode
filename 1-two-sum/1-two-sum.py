@@ -8,5 +8,3 @@ class Solution:
                 return [prev[diff], pos]
             
             prev[n] = pos
-        
-        return
