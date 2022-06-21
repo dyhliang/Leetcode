@@ -9,12 +9,8 @@ class Solution:
                 min_price = prices[pos]
                     
             profit = prices[pos] - min_price
-            
             if profit > max_profit:
                 max_profit = profit
         
-        if max_profit < 0:
-            return 0
-        else:
-            return max_profit
+        return max_profit
                     
