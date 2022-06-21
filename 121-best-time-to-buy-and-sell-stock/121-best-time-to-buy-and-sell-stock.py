@@ -3,6 +3,7 @@ class Solution:
         min_price = prices[0]
         max_profit = 0
         profit = 0
+        
         for pos in range(len(prices)):
             if prices[pos] < min_price:
                 min_price = prices[pos]
