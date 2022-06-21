@@ -3,7 +3,6 @@ class Solution:
         nums1.sort()
         nums2.sort()
         shared = []
-        
         p1 = 0
         p2 = 0
         
@@ -17,5 +16,5 @@ class Solution:
                 p1 += 1
                 p2 += 1
 
-        
+
         return shared
