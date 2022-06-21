@@ -1,5 +1,6 @@
 class Solution:
     def topKFrequent(self, nums: list[int], k: int):
+        
         unique_vals = len(set(nums))
         occ_table = {}
         mode_vals = []
