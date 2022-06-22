@@ -3,7 +3,7 @@ class Solution:
         pairs = {")": "(",
                  "]": "[",
                  "}": "{"}
-        top = None
+
         helper = []
         for char in s:
             if char in pairs:
