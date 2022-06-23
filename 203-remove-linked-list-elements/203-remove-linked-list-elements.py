@@ -9,7 +9,6 @@ class Solution:
         
         sent = ListNode(None)
         sent.next = head
-
         prev = sent        
         curr = head
         
