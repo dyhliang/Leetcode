@@ -15,5 +15,6 @@ class Solution:
             else:
                 visited.add(curr)
                 curr = curr.next
-    
+                
         return False
+    
