@@ -1,5 +1,6 @@
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
+        # assigns the coordinates of the entire matrix stored in one list into groupings
         box_groups = {
             1: [0, 1, 2, 9, 10, 11, 18, 19, 20],
             2: [3, 4, 5, 12, 13, 14, 21, 22, 23],
@@ -16,8 +17,10 @@ class Solution:
         for lst in board:
             comb += lst
             
+        # stores occurrences of each value within each box into dict to check for duplicates
         for key in box_groups:
             box_occ = {}
+            # index thru the list of each key inside box_groups
             for index in box_groups[key]:
                 if comb[index] != ".":
                     box_occ[comb[index]] = 1 + box_occ.get(comb[index], 0)
@@ -35,6 +38,7 @@ class Solution:
                 if 2 in row_occ.values():
                     return False
     
+        # stores occurrences of each value within each column, row[0][0] to row[8][0], then row[0][1] to row[8][1], so on...
         col_pos = 0
         while col_pos < len(board):
             col_occ = {}
