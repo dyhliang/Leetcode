@@ -14,7 +14,6 @@ class MyQueue:
         return res
 
     def peek(self) -> int:
-        temp = self.queue[::-1]
         return self.queue[0]
 
     def empty(self) -> bool:
