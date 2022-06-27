@@ -14,8 +14,7 @@ class Solution:
         if n > count:
             return None
         elif n == count:
-            head = head.next
-            return head
+            return head.next
         else:
             curr = head
             while curr:
