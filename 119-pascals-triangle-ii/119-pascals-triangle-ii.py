@@ -1,5 +1,4 @@
 class Solution:
-    
     def generate(self, numRows: int) -> List[int]:
         r = 1
         index = 1
@@ -19,5 +18,7 @@ class Solution:
         return res
     
     def getRow(self, rowIndex: int) -> List[int]:
+        # call on generate() from Problem #118
         rows = self.generate(rowIndex + 1)
         return rows[-1]
+    
