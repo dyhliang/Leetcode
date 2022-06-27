@@ -8,7 +8,6 @@ class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         
         curr = root
-        
         if not root:
             return 0
 
