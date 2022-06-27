@@ -14,6 +14,7 @@ class Solution:
         if n > count:
             return None
         elif n == count:
+            # remove the head in this scenario
             return head.next
         else:
             curr = head
