@@ -7,6 +7,7 @@ class MyQueue:
         self.queue.append(x)
 
     def pop(self) -> int:
+        # use temp to store the queue backwards, turn it backwards again after popping
         temp = self.queue[::-1]
         res = temp.pop()
         self.queue = temp[::-1]
