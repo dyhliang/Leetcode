@@ -1,18 +1,19 @@
 class Solution:
     def isStrobogrammatic(self, num: str) -> bool:
-        strobo_digits = ['0', '1', '6', '8', '9']
-        replace_digits = {'6': '9',
+        replace_digits = {'0': '0',
+                          '1': '1',
+                          '8': '8',
+                          '6': '9',
                          '9': '6'}
-        flipped = ""
+        replace_num = ""
         
         for digit in num:
-            if digit not in strobo_digits:
+            if digit not in replace_digits:
                 return False
-        
-            if digit in replace_digits:
-                flipped += replace_digits[digit]
+            if digit == '6' or digit == '9':
+                replace_num += replace_digits[digit]
             else:
-                flipped += digit
+                replace_num += digit
 
-        return flipped[::-1] == num
+        return replace_num[::-1] == num
     
