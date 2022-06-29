@@ -1,5 +1,6 @@
 class Solution:
     def shortestDistance(self, wordsDict: list[str], word1: str, word2: str) -> int:
+        
         hash_t = {}
         diff_list = []
         
