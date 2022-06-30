@@ -1,7 +1,6 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         mappings = {}
-        
         for pos in range(len(s)):
             # Map to hash table if neither character has been visited or used as a pair
             if s[pos] not in mappings.keys() and t[pos] not in mappings.values():
