@@ -11,11 +11,14 @@ class Solution:
 
         res = ""
         carry = ""
+        
+        # appends the extra 0s to fully line up numbers and make the while loop ctr less of a hassle
         if len(a) > len(b):
             b = ((len(a) - len(b)) * "0") + b
         elif len(b) > len(a):
             a = ((len(b) - len(a)) * "0") + a
 
+        # calculate from right to left 
         pos = len(a) - 1
         while pos >= 0:
             sum_str = carry + a[pos] + b[pos]
@@ -24,6 +27,7 @@ class Solution:
             else:
                 carry = ""
 
+            # make sure the carry number is appended on the end if we're on our last number digit
             if pos == 0:
                 res += (sums[sum_str] + carry)
             else:
@@ -31,3 +35,4 @@ class Solution:
             pos -= 1
 
         return res[::-1]
+    
