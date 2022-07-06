@@ -1,6 +1,6 @@
 class Solution:
     def intToRoman(self, num: int):
-        num_str = str(num)  #Easier to break down number when it's in string form
+        num_str = str(num)  #Breaks down number in string form
         expand_num = []     #Stores the digits when broken down into 1s and 5s
         place_val = 10 ** (len(num_str) - 1)
         pos = 0
