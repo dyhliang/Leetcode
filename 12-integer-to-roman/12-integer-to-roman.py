@@ -1,11 +1,12 @@
 class Solution:
     def intToRoman(self, num: int):
-        num_str = str(num)
-        expand_num = []
+        num_str = str(num)  #Easier to break down number when it's in string form
+        expand_num = []     #Stores the digits when broken down into 1s and 5s
         place_val = 10 ** (len(num_str) - 1)
         pos = 0
         hash_t = {}
         res = ""
+        
         roman_hash = {"0": "", "1": "I", "4": "IV", "5": "V", "9": "IX",
                       "10": "X", "40": "XL", "50": "L", "90": "XC",
                       "100": "C", "400": "CD", "500": "D", "900": "CM", "1000": "M"
@@ -18,6 +19,7 @@ class Solution:
         for val in num_str:
             if val in expand_hash.keys():
                 expand_num.append(expand_hash[val])
+                #breaks the digit down if it's a 2, 3, 6, 7, or 8
             else:
                 expand_num.append(val)
 
@@ -31,9 +33,11 @@ class Solution:
         for key in hash_t:
             val = hash_t[key]
 
+            # Uses the key place value as a multiplier to generate the key for roman_hash
             if val in roman_hash.keys():
                 res += roman_hash[str(int(val) * key)]
             else:
                 for d in val:
                     res += roman_hash[str(int(d) * key)]
         return res
+    
