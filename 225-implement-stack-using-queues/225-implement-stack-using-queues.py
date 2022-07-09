@@ -1,5 +1,4 @@
 class MyStack:
-
     def __init__(self):
         self.stack = []
 
@@ -15,7 +14,6 @@ class MyStack:
 
     def empty(self) -> bool:
         return len(self.stack) == 0
-
 
 # Your MyStack object will be instantiated and called as such:
 # obj = MyStack()
