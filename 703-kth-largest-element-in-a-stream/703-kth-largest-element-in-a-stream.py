@@ -7,7 +7,6 @@ class KthLargest:
     def add(self, val: int) -> int:
         self.stream.append(val)
         self.stream.sort()
-        
         return self.stream[self.kth * -1]
 
 
