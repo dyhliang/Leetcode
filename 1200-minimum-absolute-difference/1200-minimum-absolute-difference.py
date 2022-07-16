@@ -1,7 +1,6 @@
 class Solution:
     def minimumAbsDifference(self, arr: list[int]) -> list[list[int]]:
         arr.sort()  # sorts the arr to get adjacent values to be 'closer' to each other
-
         min_diff = arr[1] - arr[0]
         diff_pairs = []
 
