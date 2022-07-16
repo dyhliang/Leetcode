@@ -1,5 +1,6 @@
 class Solution:
     def findDuplicates(self, nums: list[int]) -> list[int]:
+        
         hash_t = {}
         dupes = []
         for val in nums:
