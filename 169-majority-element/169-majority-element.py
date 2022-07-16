@@ -4,7 +4,6 @@ class Solution:
         for val in nums:
             hash_t[val] = 1 + hash_t.get(val, 0) 
             
-        for key in hash_t:
-            if hash_t[key] >= (len(nums) // 2 + 1):
-                return key
+            if hash_t[val] >= (len(nums) // 2 + 1):
+                return val
             
