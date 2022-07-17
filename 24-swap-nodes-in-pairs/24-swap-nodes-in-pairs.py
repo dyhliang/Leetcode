@@ -8,19 +8,20 @@ class Solution:
         curr = head
         
         while curr and curr.next:
-            temp = curr.next    # temp = 2
+            temp = curr.next    
             
-            curr.next = temp.next  # 2 -> 1 -> 3
+            curr.next = temp.next  
 
             if curr == head:
                 head = temp
+                temp.next = curr
             else:
                 temp.next = curr
                 prev.next = temp
                 
-            temp.next = curr
             prev = curr
             if curr.next:
                 curr = curr.next
             
         return head
+    
