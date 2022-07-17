@@ -9,7 +9,6 @@ class Solution:
         
         while curr and curr.next:
             temp = curr.next    
-            
             curr.next = temp.next  
 
             if curr == head:
