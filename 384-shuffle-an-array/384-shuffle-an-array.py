@@ -1,7 +1,6 @@
 import random
 
 class Solution:
-
     def __init__(self, nums: list[int]):
         self.nums = nums
         self.backup = []
