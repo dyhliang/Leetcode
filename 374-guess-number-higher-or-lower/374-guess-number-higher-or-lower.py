@@ -8,8 +8,8 @@
 class Solution:
     def guessNumber(self, n: int) -> int:
 
-        left = 0
-        right = n
+        left, right = 0, n
+
         while left <= right:
             middle = (left + right) // 2
             if guess(middle) == 0:
@@ -21,3 +21,4 @@ class Solution:
                 left = middle + 1
 
         return -1
+    
