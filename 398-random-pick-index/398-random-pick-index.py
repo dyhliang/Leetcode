@@ -4,7 +4,7 @@ class Solution:
 
     def __init__(self, nums: List[int]):
         self.nums = nums
-        self.occs = {}
+        self.occs = {}  # Store positions of each number into list within a hashmap
         
         for pos in range(len(nums)):
             if nums[pos] not in self.occs.keys():
