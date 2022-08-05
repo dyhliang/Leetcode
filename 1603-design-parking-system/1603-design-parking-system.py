@@ -9,11 +9,8 @@ class ParkingSystem:
         }
 
     def addCar(self, carType: int) -> bool:
-        if self.tracking[carType][1] >= self.tracking[carType][0]:
-            return False
-        else:
-            self.tracking[carType][1] += 1
-            return True
+        self.tracking[carType][1] += 1
+        return self.tracking[carType][1] <= self.tracking[carType][0]
 
 
 # Your ParkingSystem object will be instantiated and called as such:
