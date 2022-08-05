@@ -24,3 +24,4 @@ class Solution:
             
         traverse(root, 0)
         return levels
+    
