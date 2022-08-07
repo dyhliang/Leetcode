@@ -1,6 +1,5 @@
 class Solution:
     def canMakeArithmeticProgression(self, arr: List[int]) -> bool:
-        
         arr.sort()
         delta = arr[1]-arr[0]
         
