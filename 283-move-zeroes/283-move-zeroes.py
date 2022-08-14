@@ -4,6 +4,9 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         last_nonzero = 0
+        # Modify in place, only need to keep this variable so that this will be the 
+        # starting point for the ensuing array to change all elements there and onwards
+        # to 0.
         
         for i in range(0, len(nums)):
             if nums[i] != 0:
