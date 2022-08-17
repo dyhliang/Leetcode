@@ -9,6 +9,5 @@ class Solution:
                 morse += table[ord(char) - 97]
             
             res.append(morse)
-            
         return len(set(res))
     
