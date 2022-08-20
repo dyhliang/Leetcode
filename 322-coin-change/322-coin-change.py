@@ -7,6 +7,7 @@ class Solution:
 
         If we get to the end of the list and the total =/= amount, return -1
         """
+        coins.sort()
         arr = [amount + 1] * (amount + 1)
         arr[0] = 0
         
@@ -14,7 +15,8 @@ class Solution:
             for j in range(len(coins)):
                 if coins[j] <= i:
                     arr[i] = min(arr[i], 1 + arr[i - coins[j]])
-                
+                else:
+                    break
         
         if arr[amount] > amount:
             return -1
