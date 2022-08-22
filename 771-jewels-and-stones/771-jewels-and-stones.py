@@ -1,6 +1,5 @@
 class Solution:
     def numJewelsInStones(self, jewels: str, stones: str) -> int:
-        
         jewels_list = list(jewels)
         res = 0
         hash_t = {}
