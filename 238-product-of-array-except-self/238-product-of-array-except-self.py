@@ -5,12 +5,9 @@ class Solution:
             product *= val
 
         no_zeroes = [a for a in nums if a != 0]
-        if len(no_zeroes) == 0:
-            nonzero_prod = 0
-        else:
-            nonzero_prod = 1
-            for val in no_zeroes:
-                nonzero_prod *= val
+        nonzero_prod = 1
+        for val in no_zeroes:
+            nonzero_prod *= val
 
         res = []
         for val in nums:
