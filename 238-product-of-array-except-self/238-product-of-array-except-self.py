@@ -10,10 +10,11 @@ class Solution:
 
         res = []
         for val in nums:
-            if val == 0 and nums.count(0) > 1:
-                res.append(0)
-            elif val == 0 and nums.count(0) == 1:
-                res.append(nonzero_prod)
+            if val == 0:
+                if nums.count(0) > 1:
+                    res.append(0)
+                else:
+                    res.append(nonzero_prod)
             else:
                 res.append(int(product * (val ** -1)))
 
