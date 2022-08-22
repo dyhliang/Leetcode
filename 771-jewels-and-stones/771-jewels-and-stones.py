@@ -3,9 +3,14 @@ class Solution:
         
         jewels_list = list(jewels)
         res = 0
+        hash_t = {}
+        
+        for ele in stones:
+            hash_t[ele] = 1 + hash_t.get(ele, 0)
         
         for item in jewels_list:
-            res += stones.count(item)
+            if item in stones:
+                res += hash_t[item]
             
         return res
     
