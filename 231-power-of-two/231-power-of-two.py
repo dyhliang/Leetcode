@@ -8,6 +8,4 @@ class Solution:
         
         if n % 2 == 0:
             return self.isPowerOfTwo(int(n / 2))
-        else:
-            return False
     
