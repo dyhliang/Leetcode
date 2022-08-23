@@ -1,7 +1,6 @@
 class Solution:
     def shortestDistance(self, wordsDict: list[str], word1: str, word2: str) -> int:
         hash_t = {}
-
         # Fill in hash table with indices for word1 and word2
         for i, w in enumerate(wordsDict):
             if w == word1 or w == word2:
