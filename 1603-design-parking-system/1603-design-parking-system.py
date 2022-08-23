@@ -10,6 +10,7 @@ class ParkingSystem:
         self.tracking[carType] -= 1
         # Always decrements by 1 and checks if the corresponding carType's space is not negative
         return self.tracking[carType] >= 0
+    
 
 # Your ParkingSystem object will be instantiated and called as such:
 # obj = ParkingSystem(big, medium, small)
