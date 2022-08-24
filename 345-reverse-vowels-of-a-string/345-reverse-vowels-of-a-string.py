@@ -4,12 +4,13 @@ class Solution:
         vowel_pos = [pos for pos in range(len(s)) if s[pos] in vowels]
         s_chars = [char for char in s]
         
-        b = -1
-        for i in range(len(vowel_pos) // 2):
-            s_chars[vowel_pos[i]], s_chars[vowel_pos[b]] = s_chars[vowel_pos[b]], s_chars[vowel_pos[i]]
-            b -= 1
+        r = -1
+        for l in range(len(vowel_pos) // 2):
+            left = vowel_pos[l]
+            right = vowel_pos[r]
+            s_chars[left], s_chars[right] = s_chars[right], s_chars[left]
+            r -= 1
             
         new_s = ''.join(s_chars)
         return new_s
-    
     
