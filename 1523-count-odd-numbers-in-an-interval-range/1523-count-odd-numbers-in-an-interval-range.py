@@ -3,6 +3,6 @@ class Solution:
         num_range = high - low + 1
         
         if low % 2 == 1 and high % 2 == 1:
-            return int((num_range+1) / 2)
+            return (num_range + 1) // 2
         else:
-            return int(num_range/2)
+            return num_range // 2
