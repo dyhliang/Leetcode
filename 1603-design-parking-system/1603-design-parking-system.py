@@ -11,7 +11,7 @@ class ParkingSystem:
     def addCar(self, carType: int) -> bool:
         self.tracking[carType] -= 1
         # Always decrements by 1 and checks if the corresponding carType's space is not negative
-        return self.tracking[carType] >= 0
+        return self.tracking[carType] > -1
     
 
 # Your ParkingSystem object will be instantiated and called as such:
