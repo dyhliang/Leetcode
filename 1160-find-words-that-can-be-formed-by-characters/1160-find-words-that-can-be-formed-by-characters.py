@@ -3,11 +3,10 @@ from copy import deepcopy
 
 class Solution:
     def countCharacters(self, words: list[str], chars: str) -> int:
-        
         occ = {}
         for c in chars:
             occ[c] = 1 + occ.get(c, 0)
-        res = []
+        res = 0
 
         for word in words:
             temp = deepcopy(occ)
@@ -16,10 +15,10 @@ class Solution:
                     occ[letter] = occ.get(letter, 0) - 1
 
                     if pos == len(word) - 1:
-                        res.append(len(word))
+                        res += len(word)
                 else:
                     break
 
             occ = temp
 
-        return sum(res)
+        return res
