@@ -3,6 +3,7 @@ from copy import deepcopy
 
 class Solution:
     def countCharacters(self, words: list[str], chars: str) -> int:
+        
         occ = {}
         for c in chars:
             occ[c] = 1 + occ.get(c, 0)
