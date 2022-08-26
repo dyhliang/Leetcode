@@ -9,6 +9,9 @@ class Solution:
                 if count == k:
                     return val
 
+        # If there are missing numbers beyond the max, the next
+        # missing values is found at high + the remaining 
+        # difference between k and the count
         if count < k:
             return high + (k - count)
         
