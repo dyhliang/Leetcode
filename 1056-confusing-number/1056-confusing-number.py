@@ -6,8 +6,8 @@ class Solution:
                "8": "8",
                "9": "6"}
         new_n = ""
-        
-        for char in str(n)[::-1]:
+        rev_str = str(n)[::-1]
+        for char in rev_str:
             if char not in flip.keys():
                 return False
             else:
