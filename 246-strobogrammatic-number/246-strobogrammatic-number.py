@@ -10,6 +10,7 @@ class Solution:
         for digit in num:
             if digit not in replace_digits:
                 return False
+            
             if digit == '6' or digit == '9':
                 replace_num += replace_digits[digit]
             else:
