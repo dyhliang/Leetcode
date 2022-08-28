@@ -12,7 +12,6 @@ class Solution:
             new_n = ""
             rev_str = str(n)[::-1]
 
-
             for digit in rev_str:
                 if digit not in flip.keys():
                     return False
