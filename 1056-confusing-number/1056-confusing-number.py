@@ -5,7 +5,6 @@ class Solution:
                "6": "9",
                "8": "8",
                "9": "6"}
-        
         new_n = ""
         
         for char in str(n)[::-1]:
