@@ -26,7 +26,7 @@ Ex: n = 8
                   = ...
                   
                   
-The other combinations omitted will also have every pair of moves after the first two be a variation of 1,3 or 2,2 or 3,1.
+The other combinations omitted will also have every pair of moves after the first two will be a variation of 1,3 or 2,2 or 3,1.
 
 Otherwise for every number that is not a multiple of 4, there is always an optimal path I can take to guarantee a win.
 
