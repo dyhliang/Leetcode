@@ -1,1 +1,1 @@
-​
+​This can be solved using a lexigographically sort on every word within the list, then using a hash map to store the new string from joining the lexicographically sorted letters as the key. This key will hold a list of all the other words that share exactly the same letters. We can then iterate through every list in the hash map's values via list comprehension and store it to the final list to be returned.
