@@ -6,16 +6,14 @@ class Solution:
                "8": "8",
                "9": "6"}
         
-        if any(digit in ("2", "3", "4", "5", "7") for digit in str(n)):
+        str_n = str(n)
+        
+        if any(digit in ("2", "3", "4", "5", "7") for digit in str_n):
             return False
         else:
             new_n = ""
-            rev_str = str(n)[::-1]
-
-            for digit in rev_str:
-                if digit not in flip.keys():
-                    return False
-                else:
-                    new_n += flip[digit]
+            
+            for i in range(len(str_n)-1, -1, -1):
+                new_n += flip[str_n[i]]
 
             return int(new_n) != n
