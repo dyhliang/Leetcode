@@ -1,6 +1,6 @@
-class Solution(object):
-    def singleNumber(self, nums):
-
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        
         no_dupes = set(nums)
     
         for val in no_dupes:
