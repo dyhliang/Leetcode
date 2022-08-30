@@ -5,6 +5,7 @@ class Solution:
         s_list.sort()
         t_list.sort()
 
+        
         for pos in range(max(len(s_list), len(t_list))):
             if pos >= len(s_list):
                 return t_list[pos]
