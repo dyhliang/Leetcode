@@ -9,7 +9,6 @@ class Solution:
             heapq.heappush(max_heap, ((-1 * nums.count(val)), val))
             
         res = []
-        
         while k > 0:
             n = heapq.heappop(max_heap)
             res.append(n[1])
