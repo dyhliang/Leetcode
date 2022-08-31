@@ -4,6 +4,7 @@ class Solution:
         heapq.heapify(max_heap)
 
         while len(max_heap) > 1:
+            # y is the heavier stone
             y = heapq.heappop(max_heap)
             x = heapq.heappop(max_heap)
             if x != y:
