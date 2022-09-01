@@ -14,6 +14,5 @@ class Solution:
 
             heapq.heappush(minheap, rng[1])
 
-
         return len(minheap) == 1
     
