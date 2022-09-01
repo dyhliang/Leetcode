@@ -7,7 +7,6 @@ class Solution:
             all_rows += arr
             
         min_heap = []
-        
         for val in all_rows:
             heapq.heappush(min_heap, val)
             
