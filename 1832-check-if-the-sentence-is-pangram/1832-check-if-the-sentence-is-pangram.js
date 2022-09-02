@@ -9,5 +9,5 @@ var checkIfPangram = function(sentence) {
         occ[sentence[i]]++;
     }
     
-    return (Object.keys(occ).length === 26)
+    return (Object.keys(occ).length === 26);
 };
