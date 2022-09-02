@@ -2,6 +2,7 @@ import heapq
 
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
+        
         maxheap = []
         for val in nums:
             heapq.heappush(maxheap, -val)
