@@ -14,6 +14,7 @@ class Solution:
         self.traverse(root.left, arr, total)
         self.traverse(root.right, arr, total)
         
+        # Works like postorder traversal
         if not root.left and not root.right:
             arr.append(total)
             
