@@ -6,6 +6,7 @@
 #         self.right = right
 class Solution:
     def traverse(self, root: Optional[TreeNode], arr: list, total: int) -> list:
+        
         if not root:
             return
         else:
@@ -21,6 +22,7 @@ class Solution:
         return arr
     
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
+        
         if root:
             res = self.traverse(root, [], 0)
             return targetSum in res
