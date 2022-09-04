@@ -22,8 +22,4 @@ class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         if root:
             res = self.traverse(root, [], 0)
-            if targetSum in res:
-                return True
-            else:
-                return False
-
+            return targetSum in res
