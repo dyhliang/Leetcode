@@ -5,14 +5,14 @@ class Solution:
                  "}": "{"}
         helper = []
         for char in s:
-            if char in pairs:
+            if char in pairs.values():
+                helper.append(char)
+            else:
                 if helper and (helper[-1] == pairs[char]):
                     helper.pop()
                 else:
                     return False
-            else:
-                # appends the left bracket onto stack
-                helper.append(char)
-            
+
+
         return len(helper) == 0
     
