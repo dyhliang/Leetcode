@@ -7,7 +7,7 @@ class Solution:
         for char in s:
             if char in pairs:
                 if helper and (helper[-1] == pairs[char]):
-                    top = helper.pop()
+                    helper.pop()
                 else:
                     return False
             else:
