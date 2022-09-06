@@ -7,6 +7,6 @@ class Solution:
             if diff not in seen.keys():
                 seen[n] = i
             else:
-                res = [seen[target-n], i]
+                res = [seen[diff], i]
                 
         return res
