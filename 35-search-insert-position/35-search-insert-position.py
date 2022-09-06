@@ -3,6 +3,7 @@ class Solution:
         left = 0
         right = len(nums) - 1
         
+        # Use Binary Search to look for the index as the array is already sorted.
         while left <= right:
             middle = (left + right) // 2
             
@@ -14,3 +15,4 @@ class Solution:
                 right = middle - 1
             
         return left
+    
