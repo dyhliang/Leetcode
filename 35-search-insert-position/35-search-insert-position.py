@@ -14,5 +14,7 @@ class Solution:
             else:
                 right = middle - 1
             
+        # Instead of returning -1 if not found, left would be where the last pointer goes
+        # given that nums[left] is the smallest number less than the target.
         return left
     
