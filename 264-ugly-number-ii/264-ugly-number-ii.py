@@ -17,13 +17,9 @@ class Solution:
         heap = []
         heapq.heappush(heap, 1)
         
-        
         for val in range(1690):
             curr = heapq.heappop(heap)
             nums.append(curr)
             self.isUgly(curr, seen, heap)
             
         return nums[n-1]
-            
-            
-    
