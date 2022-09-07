@@ -1,7 +1,6 @@
 import heapq
 
 class Solution:
-    
     def isUgly(self, n: int, seen: set, h: list) -> bool:
         for p in [2, 3, 5]:
             new_ugly = n * p
