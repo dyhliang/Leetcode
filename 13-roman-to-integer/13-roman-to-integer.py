@@ -10,7 +10,6 @@ class Solution:
 
         while pos < len(s):
             curr = vals[s[pos]]
-
             if (pos < len(s) - 1) and (curr < vals[s[pos + 1]]):
                 total += vals[s[pos] + s[pos + 1]]
                 pos += 2
