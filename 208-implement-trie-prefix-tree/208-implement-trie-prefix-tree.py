@@ -10,7 +10,7 @@ class Trie:
                 t[char] = {}
             t = t[char]
                 
-        t["_"] = True
+        t["+"] = True
 
     def search(self, word: str) -> bool:
         t = self.trie
@@ -20,7 +20,8 @@ class Trie:
             
             t = t[char]
             
-        return "_" in t
+        return "+" in t
+        #return self.startsWith(word)
 
     def startsWith(self, prefix: str) -> bool:
         t = self.trie
