@@ -8,17 +8,11 @@ class Solution:
         # n = 6: 9 [1, 3, 5, 7, 9, 11]
         # n = 7: 12 [1, 3, 5, 7, 9, 11, 13]
         # n = 10: 25 [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
-        # The pattern: Find the median, and add the distance from the median to 
-        # each values at each index after(or before, but not both).
-        # Also, n itself is conveniently the median.
+
         if n % 2 == 0:
-            curr = n + 1
+            new_n = n ** 2
         else:
-            curr = n
-            
-        ops = 0
-        while curr <= (2 * n - 1):
-            ops += (curr - n)
-            curr += 2
-            
-        return ops
+            new_n = n ** 2 - 1
+        
+        return new_n // 4
+    
