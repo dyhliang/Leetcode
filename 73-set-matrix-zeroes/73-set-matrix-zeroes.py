@@ -1,6 +1,5 @@
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
-        
         # Map the row and col coordinates where 0 is found 
         zero_loc = {"r": [],
                     "c": []}
