@@ -1,16 +1,15 @@
 class Solution:
     def fizzBuzz(self, n: int) -> List[str]:
+        hasht = {3: "Fizz", 5: "Buzz"}
         res = []
         for i in range(1, n+1):
             string = ""
-            if i % 3 != 0 and i % 5 != 0:
-                string += str(i)
-                
-            if i % 3 == 0:
-                string += "Fizz"
+            for key in hasht.keys():
+                if i % key == 0:
+                    string += hasht[key]
             
-            if i % 5 == 0:
-                string += "Buzz"
+            if string == "":
+                string = str(i)
 
             res.append(string)
                        
