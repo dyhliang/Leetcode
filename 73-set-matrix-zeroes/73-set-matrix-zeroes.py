@@ -1,7 +1,10 @@
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
+        
+        # Map the row and col coordinates where 0 is found 
         zero_loc = {"r": [],
                     "c": []}
+        
         for i, row in enumerate(matrix):
             for j, col in enumerate(row):
                 if matrix[i][j] == 0:
