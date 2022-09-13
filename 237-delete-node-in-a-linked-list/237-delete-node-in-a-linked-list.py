@@ -10,3 +10,4 @@ class Solution:
         # value in place to the value of its next node, and its next pointer so that it's pointing to the node 2 spots over to its right.
         node.val = node.next.val
         node.next = node.next.next
+        
