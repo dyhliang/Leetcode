@@ -16,3 +16,4 @@ class Solution:
                 pairs += math.factorial(l)/(math.factorial(2) * math.factorial(l - 2))
                 
         return int(pairs)
+    
