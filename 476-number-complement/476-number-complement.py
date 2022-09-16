@@ -10,3 +10,4 @@ class Solution:
             new_bin += swap[digit]
 
         return int(new_bin, 2)
+    
