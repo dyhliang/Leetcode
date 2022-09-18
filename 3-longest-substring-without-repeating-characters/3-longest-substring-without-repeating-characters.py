@@ -6,6 +6,7 @@ class Solution:
         if len(set(s)) == len(s):
             return len(s)
 
+        # Sliding window approach
         # Use a seen list to keep track of said values
         # deque for dequeueing from the front
         seen = []
