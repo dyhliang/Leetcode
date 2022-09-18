@@ -18,17 +18,22 @@ class Solution:
                 seen.append(char)
                 substr.append(char)
             else:
-                # 
+                # Reduce duplicate substr lengths in the list
                 if len(substr) not in sub_list:
                     sub_list.append(len(substr))
 
+                # If the current char is already found in substr, keep popping off the front until we get that same char, then pop one more time
                 if char in substr:
                     while substr[0] != char:
                         substr.popleft()
 
                     substr.popleft()
+                
+                # Append current character as part of new substr
                 substr.append(char)
 
+        # For substrs that don't see a duplicate as it reaches the end of s.
         sub_list.append(len(substr))
 
         return max(sub_list)
+    
