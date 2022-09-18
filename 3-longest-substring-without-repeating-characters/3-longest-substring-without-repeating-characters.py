@@ -6,16 +6,20 @@ class Solution:
         if len(set(s)) == len(s):
             return len(s)
 
+        # Use a seen list to keep track of said values
+        # deque for dequeueing from the front
         seen = []
         substr = deque([])
-        sub_list = []
+        sub_list = []   # Keeps track of the lengths of each substring
 
+        
         for char in s:
             if char not in seen:
                 seen.append(char)
                 substr.append(char)
             else:
-                if len(substr) > 0 and len(substr) not in sub_list:
+                # 
+                if len(substr) not in sub_list:
                     sub_list.append(len(substr))
 
                 if char in substr:
