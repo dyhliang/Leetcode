@@ -11,8 +11,7 @@ class Solution:
         
         # Use a set to store dupe values seen for checking head and tail later
         dupes = set()
-        curr = head
-        prev = head
+        curr = prev = head
         
         while curr.next:
             if curr.val == curr.next.val:
