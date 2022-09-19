@@ -8,6 +8,7 @@ class Solution:
         if not head:
             return None
         
+        # Use a set to store dupe values seen for checking head and tail later
         dupes = set()
         curr = head
         prev = head
@@ -17,7 +18,7 @@ class Solution:
                 dupes.add(curr.val)
                 curr.next = curr.next.next
             else:
-                # Second condition is if the last value was a dupe, come back remove
+                # Once all of duplicates that follow curr node are removed, remove the curr node as well
                 if curr.val in dupes:
                     prev.next = curr.next
                 else:
@@ -25,6 +26,7 @@ class Solution:
                 
                 curr = curr.next
                 
+        # If the last value is a dupe, make sure to remove as well
         if curr.val in dupes:
             prev.next = curr.next
             
