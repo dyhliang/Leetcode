@@ -5,7 +5,6 @@ class Node:
         
 
 class MinStack:
-
     def __init__(self):
         self._head = None
         
