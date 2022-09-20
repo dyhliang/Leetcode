@@ -1,5 +1,6 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
+        
         mappings = {}
         for i, char in enumerate(s):
             # Map to hash table if neither character has been visited or used as a pair
