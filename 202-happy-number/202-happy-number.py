@@ -1,6 +1,5 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
-        
         seen = set()
         while n != 1:
             # Use list comp. to compute the sums of each digit squared
