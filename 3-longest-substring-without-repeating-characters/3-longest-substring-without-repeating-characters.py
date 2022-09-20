@@ -11,17 +11,13 @@ class Solution:
         # deque for dequeueing from the front
         seen = []
         substr = deque([])
-        sub_list = []   # Keeps track of the lengths of each substring
+        longest = 0  # Keeps track of the longest substring
 
-        
         for char in s:
             if char not in seen:
                 seen.append(char)
                 substr.append(char)
             else:
-                # Reduce duplicate substr lengths in the list
-                if len(substr) not in sub_list:
-                    sub_list.append(len(substr))
 
                 # If the current char is already found in substr, keep popping off the front until we get that same char, then pop one more time
                 if char in substr:
@@ -34,7 +30,7 @@ class Solution:
                 substr.append(char)
 
         # For substrs that don't see a duplicate as it reaches the end of s.
-        sub_list.append(len(substr))
+            longest = max(len(substr), longest)
 
-        return max(sub_list)
+        return longest
     
