@@ -29,7 +29,7 @@ class Solution:
                 # Append current character as part of new substr
                 substr.append(char)
 
-        # For substrs that don't see a duplicate as it reaches the end of s.
+            # Update the longest substr count if current substr length is longest
             longest = max(len(substr), longest)
 
         return longest
