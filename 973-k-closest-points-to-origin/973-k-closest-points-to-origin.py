@@ -2,6 +2,7 @@ import heapq
 
 class Solution:
     def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+        # Use a minheap to store (dist, coordinates)
         minheap = []
         for p in points:
             dist = sqrt(p[0] ** 2 + p[1] ** 2)
