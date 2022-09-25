@@ -1,7 +1,8 @@
 from collections import deque
 
 class Solution:
-    def countGoodSubstrings(self, s: str) -> int:        
+    def countGoodSubstrings(self, s: str) -> int:     
+        
         window = deque([])
         count = 0
 
