@@ -6,7 +6,6 @@
 #         self.right = right
 class Solution:
     def traverse(self, root: Optional[TreeNode], arr: list, total: int) -> list:
-        
         if not root:
             return
         else:
