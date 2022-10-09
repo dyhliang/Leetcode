@@ -2,7 +2,6 @@ class Solution:
     def countSegments(self, s: str) -> int:
         prev = " "
         count = 0
-
         for pos, char in enumerate(s):
             if char == " " and prev != " ":
                 count += 1
