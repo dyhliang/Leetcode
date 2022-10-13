@@ -1,25 +1,33 @@
+import sys
+
 class Solution:
-    def coinChange(self, coins: list[int], amount: int) -> int:
-        """
-        Iterate from last pos in array, keep checking that adding curr position to total            is less than amount  until it is > amount, then move back a space, repeat
-
-        If total == amount at any point, return
-
-        If we get to the end of the list and the total =/= amount, return -1
-        """
-        coins.sort()
-        arr = [amount + 1] * (amount + 1)
-        arr[0] = 0
-        
-        for i in range(amount + 1):
-            for j in range(len(coins)):
-                if coins[j] <= i:
-                    arr[i] = min(arr[i], 1 + arr[i - coins[j]])
-                else:
-                    break
-        
-        if arr[amount] > amount:
+    def helper(self, coins: list[int], amount: int, countmemo: list[int]) -> int:
+        if amount < 0:
             return -1
-        else:
-            return arr[amount]
+        
+        if amount == 0:
+            return 0
+        
+        if countmemo[amount] != 0:
+            return countmemo[amount]
+        
+        inf = sys.maxsize
+        min_coins = sys.maxsize
+        
+        for c in coins:
+            c_count = self.helper(coins, amount - c, countmemo)
+            
+            if 0 <= c_count < min_coins:
+                min_coins = c_count + 1
+                
+        countmemo[amount] = -1 if (min_coins == inf) else min_coins
+        
+        return countmemo[amount]
+
+    
+    def coinChange(self, coins: list[int], amount: int) -> int:
+        if amount == 0:
+            return 0
+        
+        return self.helper(coins, amount, [0] * (amount + 1))
         
