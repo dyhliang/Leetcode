@@ -24,7 +24,6 @@ class Solution:
         
         return countmemo[amount]
 
-    
     def coinChange(self, coins: list[int], amount: int) -> int:
         if amount == 0:
             return 0
