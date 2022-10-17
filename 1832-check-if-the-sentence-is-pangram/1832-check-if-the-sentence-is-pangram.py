@@ -1,5 +1,9 @@
 class Solution:
     def checkIfPangram(self, s: str) -> bool:
+        
+        if len(s) < 26:
+            return False
+        
         no_dupes = "".join(set(str(s)))
         occ = {}
         
