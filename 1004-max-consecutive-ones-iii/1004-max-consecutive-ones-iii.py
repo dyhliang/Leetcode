@@ -2,6 +2,7 @@ from collections import deque
 
 class Solution:
     def longestOnes(self, nums: list[int], k: int) -> int:
+        
         window = deque([])
         curr_zeroes = 0
         max_window = 0
