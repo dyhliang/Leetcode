@@ -18,3 +18,4 @@ class Solution:
                 shortest_len = min(shortest_len, curr_len)
 
         return shortest_len
+    
