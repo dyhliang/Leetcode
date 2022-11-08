@@ -12,5 +12,4 @@ class Solution:
                     memo[i][j] = memo[i-1][j-1] + 1
                 else:
                     memo[i][j] = max(memo[i-1][j], memo[i][j-1])
-
         return memo[len_1][len_2]
