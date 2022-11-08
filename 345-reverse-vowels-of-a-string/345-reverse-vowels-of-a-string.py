@@ -4,6 +4,7 @@ class Solution:
         vowel_pos = [pos for pos in range(len(s)) if s[pos] in vowels]
         s_chars = [char for char in s]
         
+        
         r = -1
         for l in range(len(vowel_pos) // 2):
             left = vowel_pos[l]
