@@ -17,7 +17,7 @@ class MyQueue:
         return self.queue[0]
 
     def empty(self) -> bool:
-        return len(self.queue) == 0
+        return not self.queue
 
 
 # Your MyQueue object will be instantiated and called as such:
