@@ -1,12 +1,11 @@
 class Solution:
     def reverseWords(self, s: str) -> str:
         no_spaces = (s.split(" "))
-        no_spaces.reverse()
         res = ""
         
-        for word in no_spaces:
-            if word != "":
-                res += (word + " ")
+        for i in range(len(no_spaces)-1, -1, -1):
+            if no_spaces[i] != "":
+                res += (no_spaces[i] + " ")
                 
         return res[:-1]
         
