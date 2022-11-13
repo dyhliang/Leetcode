@@ -8,9 +8,10 @@ class MyQueue:
 
     def pop(self) -> int:
         # use temp to store the queue backwards, turn it backwards again after popping
-        temp = self.queue[::-1]
+        self.queue.reverse()
+        temp = self.queue
         res = temp.pop()
-        self.queue = temp[::-1]
+        self.queue.reverse()
         return res
 
     def peek(self) -> int:
