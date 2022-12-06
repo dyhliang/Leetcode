@@ -22,5 +22,4 @@ class Solution:
             head = head.next
             
         odd_curr.next = even_sent.next
-        
         return odd_sent.next
