@@ -1,11 +1,9 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        
-        seen = {}
-        for i, n in enumerate(nums):
-            diff = target - n
-            if diff not in seen.keys():
-                seen[n] = i
+        table = {}
+        for i, val in enumerate(nums):
+            if val not in table.keys():
+                diff = target - val
+                table[diff] = i
             else:
-                res = [seen[diff], i]
-                return res
+                return [table[val], i]
