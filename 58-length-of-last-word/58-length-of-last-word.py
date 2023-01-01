@@ -1,5 +1,7 @@
-class Solution(object):
-    def lengthOfLastWord(self, s):
-        str_list = s.split()
-        return len(str_list[-1])
-        
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        conv_list = s.split(" ")[::-1]
+        for w in conv_list:
+            if w.isalpha():
+                return len(w)
+            
