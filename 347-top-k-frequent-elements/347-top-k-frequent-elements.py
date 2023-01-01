@@ -10,6 +10,7 @@ class Solution:
         for val in nums:
             occ[val] = 1 + occ.get(val, 0)
             
+        # Heap is organized by [-1 * occurence, value itself]
         for v in occ.keys():
             hq.heappush(maxheap, [-1 * occ[v], v])
             
