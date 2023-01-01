@@ -1,24 +1,27 @@
-class Solution:
-    def productExceptSelf(self, nums: list[int]) -> list[int]:  
-        product = 1
-        nonzero_prod = 1
-        for val in nums:
-            product *= val
+import numpy as np
 
-            if val != 0:
-                nonzero_prod *= val
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        # If the entire list is 0s, we just return the same list
+        if nums == len(nums) * [0]:
+            return nums
 
         res = []
+        prod = np.prod(nums)
+
+        # Keep track of alternate product when first 0 in the list is removed
+        if 0 in nums:
+            new_list = [val for val in nums]
+            new_list.remove(0)
+            alt_prod = int(np.prod(new_list))
+
         for val in nums:
-            if val == 0:
-            # when there's more than one zero, the product will always be 0
-                if nums.count(0) > 1:
-                    res.append(0)
-                else:
-                    res.append(nonzero_prod)    
-                    # if there's 1 zero in the list, use nonzero_product
+            # Didn't say we can't use ^-1 to turn the current value into its reciprocal
+            if val != 0:
+                recip = val ** -1
+                res.append(int(prod * recip))
             else:
-                res.append(int(product * (val ** -1)))
-                # use current number raised to -1 as a workaround
+                res.append(alt_prod)
 
         return res
+    
