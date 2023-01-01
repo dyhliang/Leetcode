@@ -1,22 +1,23 @@
-import heapq
+import heapq as hq
 
 class Solution:
-    def topKFrequent(self, nums: list[int], k: int):
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        # Use a dict to keep count of occurrences and maxheap to organize such occurrences
         occ = {}
-        max_heap = []
-        no_dupes = set(nums)
-
-        for n in nums:
-            occ[n] = 1 + occ.get(n, 0)
-
-        for val in no_dupes:
-            heapq.heappush(max_heap, ((-1 * occ[val]), val))
-
+        maxheap = []
         res = []
-        while k > 0:
-            n = heapq.heappop(max_heap)
-            res.append(n[1])
-            k -= 1
-
+        
+        for val in nums:
+            occ[val] = 1 + occ.get(val, 0)
+            
+        for v in occ.keys():
+            hq.heappush(maxheap, [-1 * occ[v], v])
+            
+        c = 0
+        while c < k:
+            popped = hq.heappop(maxheap)[1]
+            res.append(popped)
+            c += 1
+            
         return res
     
