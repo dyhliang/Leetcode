@@ -1,8 +1,8 @@
 class Solution:
     def minimumRounds(self, tasks: List[int]) -> int:
-        #sorted_tasks = sorted(tasks)
         htable = {}
         rounds = 0
+        
         for val in tasks:
             htable[val] = 1 + htable.get(val, 0)
 
