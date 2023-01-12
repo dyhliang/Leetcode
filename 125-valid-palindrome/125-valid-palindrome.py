@@ -1,5 +1,19 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        res = [char for char in s.lower() if char.isalnum()]
+        new_s = deque([])
+        for char in s:
+            if char.isalnum():
+                new_s.append(char)
         
-        return res == res[::-1]
+        if len(new_s) == 0:
+            return True
+        
+        while len(new_s) > 1:
+            left = new_s.popleft()
+            right = new_s.pop()
+            
+            if left.lower() != right.lower():
+                return False
+            
+        return True
+        
