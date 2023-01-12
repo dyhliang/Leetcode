@@ -4,10 +4,7 @@ class Solution:
         for char in s:
             if char.isalnum():
                 new_s.append(char)
-        
-        if len(new_s) == 0:
-            return True
-        
+
         while len(new_s) > 1:
             left = new_s.popleft()
             right = new_s.pop()
