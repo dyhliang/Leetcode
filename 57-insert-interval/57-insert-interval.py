@@ -17,21 +17,13 @@ class Solution:
         new_int = [local_min, local_max]
 
         for p in intervals:
-            if len(overlaps) == 0:
-                if newInterval[0] < p[0]:
-                    res.append(newInterval)
-                    res.append(p)
-                else:
-                    res.append(p)
-                    res.append(newInterval)
+            if p not in overlaps:
+                res.append(p)
+            elif p == overlaps[0]:
+                res.append(new_int)
 
-                # Workaround so the above if condition stops being true
-                overlaps.append(new_int)
-            else:
-                if p not in overlaps:
-                    res.append(p)
-                elif p == overlaps[0]:
-                    res.append(new_int)
+        if len(overlaps) == 0:
+            res.append(newInterval)
 
         res.sort()
         return res
