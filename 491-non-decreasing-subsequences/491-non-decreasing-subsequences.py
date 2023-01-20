@@ -17,5 +17,6 @@ class Solution:
 
             backtrack(i + 1)
 
-        backtrack(0)
+        start = 0
+        backtrack(start)
         return res
