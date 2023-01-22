@@ -2,7 +2,6 @@ class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
     # To do it in O(n), find the index of the smallest positive number
     # Then use two pointers, one going to the left and one going to the right
-    
         res = []
         start = 0
         min_val = float('inf')
