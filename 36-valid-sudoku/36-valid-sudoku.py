@@ -1,6 +1,6 @@
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        # assigns the coordinates of the entire matrix stored in one list into groupings
+        # assigns coordinates of the entire matrix stored into groupings
         box_groups = {
             1: [0, 1, 2, 9, 10, 11, 18, 19, 20],
             2: [3, 4, 5, 12, 13, 14, 21, 22, 23],
@@ -39,18 +39,15 @@ class Solution:
                     return False
     
         # stores occurrences of each value within each column, row[0][0] to row[8][0], then row[0][1] to row[8][1], so on...
-        col_pos = 0
-        while col_pos < len(board):
+        for col_pos in range(len(board)):
             col_occ = {}
             row_pos = 0
-            while row_pos < len(board):
+            for row_pos in range(len(board)):
                 if board[row_pos][col_pos] != ".":
                     col_occ[board[row_pos][col_pos]] = 1 + col_occ.get(board[row_pos][col_pos], 0)
                     
                 if 2 in col_occ.values():
                     return False
-                row_pos += 1
-            col_pos += 1
 
         return True
         
