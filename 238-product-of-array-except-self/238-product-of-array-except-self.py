@@ -3,9 +3,6 @@ import numpy as np
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         # If the entire list is 0s, we just return the same list
-        if nums == len(nums) * [0]:
-            return nums
-
         res = []
         prod = np.prod(nums)
 
