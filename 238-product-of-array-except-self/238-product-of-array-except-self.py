@@ -5,7 +5,6 @@ class Solution:
         # If the entire list is 0s, we just return the same list
         res = []
         prod = np.prod(nums)
-
         # Keep track of alternate product when first 0 in the list is removed
         if 0 in nums:
             new_list = [val for val in nums]
