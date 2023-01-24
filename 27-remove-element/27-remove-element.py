@@ -3,10 +3,6 @@ class Solution:
         end = len(nums) - 1
         for i, n in enumerate(nums):
             if n == val:
-                if i == len(nums) - 1:
-                    nums[i] = "_"
-                    return i
-
                 while nums[i] == nums[end] and end > 0:
                     nums[end] = "_"
                     end -= 1
