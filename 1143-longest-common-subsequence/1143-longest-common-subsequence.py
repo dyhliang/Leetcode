@@ -1,15 +1,20 @@
 class Solution:
-    def longestCommonSubsequence(self, dna1: str, dna2: str) -> int:
-        # Bottom up approach
-        len_1, len_2 = len(dna1), len(dna2)
-        memo = [[0 for _ in range(len_2 + 1)] for _ in range(len_1 + 1)]
+    def longestCommonSubsequence(self, text1: str, text2: str) -> int:
+        if len(text1) > len(text2):
+            diff = len(text1) - len(text2)
+            text2 += (diff * "_")
+        elif len(text2) > len(text1):
+            diff = len(text2) - len(text1)
+            text1 += (diff * "_")
 
-        for i in range(len_1 + 1):
-            for j in range(len_2 + 1):
-                if i == 0 or j == 0:
-                    memo[i][j] = 0
-                elif dna1[i - 1] == dna2[j - 1]:
-                    memo[i][j] = memo[i-1][j-1] + 1
+        n = len(text1) + 1
+        dp = [[0 for _ in range(n)] for _ in range(n)]
+
+        for i in range(1, n):
+            for j in range(1, n):
+                if text1[i - 1] == text2[j - 1]:
+                    dp[i][j] = dp[i-1][j-1] + 1
                 else:
-                    memo[i][j] = max(memo[i-1][j], memo[i][j-1])
-        return memo[len_1][len_2]
+                    dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+
+        return dp[-1][-1]
