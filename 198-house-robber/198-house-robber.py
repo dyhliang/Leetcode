@@ -8,6 +8,9 @@ class Solution:
 
         for i in range(2, len(nums)):
             dp[i] = max(dp[i-1], dp[i-2]+nums[i])
+            
+            # Then updates the value at the prev index to reflect the highest 
+            # money amt stolen up to that point
             dp[i-1] = max(dp[i-1], dp[i-2])
 
         return max(dp[-2], dp[-1])
