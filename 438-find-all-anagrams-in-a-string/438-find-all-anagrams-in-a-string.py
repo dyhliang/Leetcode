@@ -1,18 +1,23 @@
 class Solution:
     def findAnagrams(self, s: str, p: str) -> List[int]:
-        window = deque([])
         res = []
-        p_ana = "".join(sorted([*p]))
+        p_ct = [0] * 26
+        s_ct = [0] * 26
+        left = 0  # left counter for window
+        
+        for char in p:
+            p_ct[ord(char) - ord('a')] += 1
         
         for i, char in enumerate(s):
-            window.append(char)
+            window = s[left:i+1]
+            s_ct[ord(char) - ord('a')] += 1
 
             if len(window) == len(p):
-                ana = "".join(sorted(window))
-                if ana == p_ana:
+                if p_ct == s_ct:
                     res.append(i - (len(p) - 1))
                     
-                window.popleft()
+                s_ct[ord(s[left]) - ord('a')] -= 1
+                left += 1
 
         return res
     
