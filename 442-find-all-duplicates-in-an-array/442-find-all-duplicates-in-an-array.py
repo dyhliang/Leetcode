@@ -1,13 +1,11 @@
 class Solution:
-    def findDuplicates(self, nums: list[int]) -> list[int]:
-        
-        hash_t = {}
-        dupes = []
+    def findDuplicates(self, nums: List[int]) -> List[int]:
+        table = {}
+        res = []
         for val in nums:
-            hash_t[val] = hash_t.get(val, 0) + 1
-
-            if hash_t[val] > 1:
-                dupes.append(val)
-
-        return dupes
-    
+            table[val] = 1 + table.get(val, 0)
+            
+            if table[val] > 1:
+                res.append(val)
+                
+        return res
