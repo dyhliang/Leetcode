@@ -1,7 +1,6 @@
 class Solution:
     def shuffle(self, nums: List[int], n: int) -> List[int]:
         res = []
-        
         x = 0
         y = len(nums) // 2
         
