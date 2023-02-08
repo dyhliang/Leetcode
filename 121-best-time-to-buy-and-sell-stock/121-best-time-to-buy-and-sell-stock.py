@@ -7,10 +7,9 @@ class Solution:
             diff = prices[right] - prices[left]
             if diff <= 0:
                 left = right
-                right += 1
             else:
                 profit = max(diff, profit)
-                right += 1
+            right += 1
                 
         return profit
             
