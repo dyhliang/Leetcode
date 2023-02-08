@@ -13,6 +13,7 @@ class Solution:
             window = array[l:r + 1]
             if val not in seen:
                 seen.add(val)
+                
                 for j, v in enumerate(window):
                     diff = 0 - val - v
 
@@ -24,3 +25,4 @@ class Solution:
                         table[diff] = j
 
         return res
+    
