@@ -1,19 +1,10 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
-        if n <= 3:
-            return n
-        else:
-            prevprev = 1
-            prev = 2
-            total = 3
-            curr = 3
-            
-            while curr < n:
-                prevprev = prev
-                prev = total
-                total += prevprev
-                curr += 1
-            
-            return total
-                
+        memo = [0, 1, 2, 3]
         
+        for val in range(4, n+1):
+            steps = memo[-2] + memo[-1]
+            memo.append(steps)
+            
+        return memo[n]
+    
