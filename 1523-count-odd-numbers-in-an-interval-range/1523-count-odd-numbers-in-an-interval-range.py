@@ -1,8 +1,10 @@
 class Solution:
     def countOdds(self, low: int, high: int) -> int:
-        num_range = high - low + 1
+        count = (high - low) // 2
         
-        if low % 2 == 1 and high % 2 == 1:
-            return (num_range + 1) // 2
-        else:
-            return num_range // 2
+        if low % 2 == 1:
+            count += 1
+        elif high % 2 == 1:
+            count += 1
+            
+        return count
