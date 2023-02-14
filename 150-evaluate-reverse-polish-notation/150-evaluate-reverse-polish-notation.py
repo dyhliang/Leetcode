@@ -19,7 +19,6 @@ class Solution:
         # Plan: Use a stack, pop top 2 numbers off as we encounter operations
         # The value evaluated from 2 numbers and operations goes back on the stack
         # Keep doing this until we reach end of tokens, then return value from stack
-
         stack = []
         operators = {
             "+": self.add,
