@@ -4,9 +4,12 @@ class Solution:
         ans = 0
         for i, d in enumerate(conv):
             if i % 2 == 0:
-                ans += int(d)
+                factor = 1
             else:
-                ans -= int(d)
+                factor = -1
+            
+            ans += (int(d) * factor)
+
         
         return ans
     
