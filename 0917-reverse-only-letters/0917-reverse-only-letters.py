@@ -13,6 +13,7 @@ class Solution:
                 chars[l], chars[r] = chars[r], chars[l]
                 l += 1
                 r -= 1
-            
-        return "".join(chars)
+        
+        res = "".join(chars)
+        return res
     
