@@ -1,5 +1,6 @@
 class Solution:
     def findRelativeRanks(self, score: List[int]) -> List[str]:
+        
         res = []
         heap = []
         table = defaultdict()
