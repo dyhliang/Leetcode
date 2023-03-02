@@ -1,5 +1,6 @@
 class Solution:
     def threeConsecutiveOdds(self, arr: List[int]) -> bool:
+        
         streak = 0
         max_streak = 0
         
