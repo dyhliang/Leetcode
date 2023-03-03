@@ -1,12 +1,12 @@
 class Solution:
     def largestAltitude(self, gain: List[int]) -> int:
-        heights = [0]
-        i = 0
+        prev = 0
+        high = 0
         
         for val in gain:
-            n = heights[i] + val
-            heights.append(n)
-            i += 1
+            curr = prev + val
+            high = max(high, curr)
+            prev = curr
             
-        return max(heights)
+        return high
     
