@@ -22,12 +22,9 @@ class Solution:
             if n + 1 in lows:
                 right = nums[0:n + 1]
                 left = nums[n + 1:]
-                curr = left + right
+                combined = left + right
                 sorted_nums = sorted(nums)
-                if curr == sorted_nums:
-                    return True
-                else:
-                    return False
+                return combined == sorted_nums
 
         return False
     
