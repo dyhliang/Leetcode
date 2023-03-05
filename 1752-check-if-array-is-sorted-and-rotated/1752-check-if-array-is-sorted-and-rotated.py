@@ -1,9 +1,7 @@
 class Solution:
     def check(self, nums: list[int]) -> bool:
         s_nums = sorted(nums)
-        if len(nums) == 1:
-            return True
-        elif nums == s_nums:
+        if nums == s_nums:
             return True
 
         biggest = max(nums)
