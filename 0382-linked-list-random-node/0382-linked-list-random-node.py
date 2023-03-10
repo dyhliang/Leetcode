@@ -14,7 +14,6 @@ class Solution:
     def getRandom(self) -> int:
         return random.choice(self.numbers)
 
-
 # Your Solution object will be instantiated and called as such:
 # obj = Solution(head)
 # param_1 = obj.getRandom()
