@@ -5,6 +5,6 @@ class Solution:
         for c in s:
             table[c] += 1
         
-        res = sum((val // 2) * 2 for val in table.values())
+        res = sum((val // 2) * 2 for val in table.values()) + 1
 
-        return min(len(s), res + 1)
+        return min(len(s), res)
