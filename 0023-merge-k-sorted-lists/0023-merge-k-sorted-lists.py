@@ -26,3 +26,4 @@ class Solution:
             curr = curr.next
 
         return sent.next
+    
