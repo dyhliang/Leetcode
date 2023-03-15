@@ -3,7 +3,6 @@ import heapq as hq
 class Solution:
     def pickGifts(self, gifts: List[int], k: int) -> int:
         maxheap = []
-        
         for val in gifts:
             hq.heappush(maxheap, -val)
             
@@ -14,3 +13,4 @@ class Solution:
             k -= 1
             
         return -sum(maxheap)
+    
