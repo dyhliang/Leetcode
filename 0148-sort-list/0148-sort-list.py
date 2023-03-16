@@ -7,6 +7,7 @@ import heapq as hq
 
 class Solution:
     def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        
         heap = []
         curr = head
         while curr:
