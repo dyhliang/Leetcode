@@ -10,12 +10,11 @@ class Solution:
 
         j = len(seen_maxes) - 1
         for i, val in enumerate(arr):
-            if arr[i] >= seen_maxes[j] and j > 0:
+            if arr[i] >= seen_maxes[j]:
                 j -= 1
 
             arr[i] = seen_maxes[j]
 
         arr[-1] = -1
         return arr
-
     
