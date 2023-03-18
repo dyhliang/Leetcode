@@ -1,5 +1,4 @@
 class BrowserHistory:
-
     def __init__(self, homepage: str):
         self.visited = [homepage]
         self.curr = 0
