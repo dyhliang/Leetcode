@@ -2,12 +2,9 @@ class BrowserHistory:
 
     def __init__(self, homepage: str):
         self.visited = [homepage]
-        self.forwarded = False
         self.curr = 0
 
     def visit(self, url: str) -> None:
-        prev = self.curr
-        
         j = len(self.visited) - 1
         if self.visited and j > self.curr:
             self.visited = self.visited[0:self.curr+1]
