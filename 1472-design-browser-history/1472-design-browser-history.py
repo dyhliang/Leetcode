@@ -9,9 +9,8 @@ class BrowserHistory:
         prev = self.curr
         
         j = len(self.visited) - 1
-        while self.visited and j > self.curr:
-            self.visited.pop()
-            j -= 1
+        if self.visited and j > self.curr:
+            self.visited = self.visited[0:self.curr+1]
         
         self.visited.append(url)
         self.curr = len(self.visited) - 1
