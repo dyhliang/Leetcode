@@ -1,14 +1,16 @@
 class Solution:
     def findLengthOfLCIS(self, nums: List[int]) -> int:
-        window = []
+        l = 0
+        r = 0
         longest = 1
-        for n in nums:
-            if not window or n > window[-1]:
-                window.append(n)
+        for i, n in enumerate(nums):
+            if n > nums[r]:
+                r = i
             else:
-                longest = max(len(window), longest)
-                window = [n]
+                longest = max(r - l + 1, longest)
+                l = i
+                r = i
               
-        longest = max(len(window), longest)
+        longest = max(r - l + 1, longest)
         return longest
             
