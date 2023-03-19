@@ -3,6 +3,7 @@ class Solution:
         l = 0
         r = 0
         longest = 1
+        
         for i, n in enumerate(nums):
             if n > nums[r]:
                 r = i
