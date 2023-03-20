@@ -5,7 +5,6 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    
     def traverse(self, root: Optional[TreeNode], check_left: int, lefts: list[int]):
         if not root:
             return
