@@ -19,3 +19,4 @@ class Solution:
                 new_nums2.add(val)
         
         return [list(new_nums1), list(new_nums2)]
+    
