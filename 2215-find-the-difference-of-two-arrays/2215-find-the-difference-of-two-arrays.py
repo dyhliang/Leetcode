@@ -1,9 +1,9 @@
 class Solution:
-    def updateTable(self, arr, table):
+    def updateTable(self, arr: list[int], table: dict) -> None:
         for n in arr:
             table[n] == 1
             
-    def updateNewArr(self, new_arr, ta, tb):
+    def updateNewArr(self, new_arr: list[int], ta: dict, tb: dict) -> None:
         for k in ta.keys():
             if k not in tb.keys():
                 new_arr.append(k)
