@@ -14,4 +14,3 @@ class Solution:
             k -= 1
             
         return int(conv_count)
-            
