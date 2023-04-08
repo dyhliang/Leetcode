@@ -1,7 +1,6 @@
 class Solution:
     def sumOfUnique(self, nums: List[int]) -> int:
         table = defaultdict(int)
-        
         for val in nums:
             table[val] += 1
             
