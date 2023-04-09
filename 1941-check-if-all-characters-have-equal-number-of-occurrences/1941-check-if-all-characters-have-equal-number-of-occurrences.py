@@ -6,3 +6,4 @@ class Solution:
             occ[char] += 1
             
         return len(set(occ.values())) == 1
+    
