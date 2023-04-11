@@ -1,5 +1,6 @@
 class Solution:
     def reversePrefix(self, word: str, ch: str) -> str:
+        
         prefix = ""
         res = ""
         for i, c in enumerate(word):
