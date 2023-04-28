@@ -12,9 +12,7 @@ class Solution:
             j = 0
             
         for i, char in enumerate(s):
-            if char == c:
-                res[i] == 0 
-            else:
+            if char != c:
                 res[i] = min(abs(i - c_indices[j]), abs(i - c_indices[j-1]))
                 
             if i == c_indices[j] and j < len(c_indices) - 1:
