@@ -15,5 +15,6 @@ class Solution:
             
             if left == right:
                 return i
+            
         return -1
             
