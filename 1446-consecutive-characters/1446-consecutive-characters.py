@@ -1,15 +1,15 @@
 class Solution:
     def maxPower(self, s: str) -> int:
-        stack = []
+        prev = ""
         longest = 1
         
         for char in s:
-            if not stack or stack[-1] == char:
-                stack.append(char)
+            if not prev or prev[-1] == char:
+                prev += char
             else:
-                longest = max(longest, len(stack))
-                stack = [char]
+                longest = max(longest, len(prev))
+                prev = f"{char}"
         
-        longest = max(longest, len(stack))
+        longest = max(longest, len(prev))
         return longest
     
