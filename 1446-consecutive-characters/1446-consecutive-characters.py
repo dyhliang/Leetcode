@@ -12,3 +12,4 @@ class Solution:
         
         longest = max(longest, len(stack))
         return longest
+    
