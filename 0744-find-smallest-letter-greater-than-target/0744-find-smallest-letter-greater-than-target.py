@@ -1,17 +1,20 @@
 class Solution:
     def nextGreatestLetter(self, letters: List[str], target: str) -> str:
-        sorted_letters = [c for c in letters]
-        sorted_letters.append(target)
-        sorted_letters.sort()
-        n = len(sorted_letters) - 1
+        occ = [0] * 26
+        occ[ord(target) - 97] += 1
+        
+        for c in letters:
+            occ[ord(c) - 97] += 1
+
         seen = False
         
-        for i in range(n):
-            if sorted_letters[i] == target:
-                seen = True
+        for i, n in enumerate(occ):
             
-            if seen and sorted_letters[i] != sorted_letters[i+1]:
-                return sorted_letters[i + 1]
+            if seen and n != 0:
+                return chr(i + 97)
+            
+            if i == (ord(target) - 97):
+                seen = True
             
         return letters[0]
             
