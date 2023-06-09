@@ -6,15 +6,10 @@ class Solution:
         for c in letters:
             occ[ord(c) - 97] += 1
 
-        seen = False
-        
         for i, n in enumerate(occ):
             
-            if seen and n != 0:
+            if i + 97 > ord(target) and n != 0:
                 return chr(i + 97)
-            
-            if i == (ord(target) - 97):
-                seen = True
             
         return letters[0]
             
