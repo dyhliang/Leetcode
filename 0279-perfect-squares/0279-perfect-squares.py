@@ -1,11 +1,6 @@
 class Solution:
     def numSquares(self, n: int) -> int:
         def is_divided_by(n, count):
-            """
-                return: true if "n" can be decomposed into "count" number of perfect                            square numbers.
-                e.g. n=12, count=3:  true.
-                     n=12, count=2:  false
-            """
             if count == 1:
                 return n in square_nums
             
